@@ -23,7 +23,7 @@ yum makecache
 echo "Running yum updateinfo..."
 yum updateinfo
 echo "Running yum install google-compute-engine..."
-yum install -y google-compute-engine
+yum install -y google-compute-engine google-compute-engine-oslogin google-guest-agent google-osconfig-agent
 rpm -q google-compute-engine
 if [[ $? -ne 0 ]]; then
   echo "ERROR: Failed to install ${pkg}."
